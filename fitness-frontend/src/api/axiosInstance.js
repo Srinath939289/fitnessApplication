@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set your backend URL (allow override with REACT_APP_API_URL)
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://fitnessapplication-n1uh.onrender.com';
+const API_BASE_URL ='https://fitnessapplication-n1uh.onrender.com';
 
 // Create axios instance with a timeout so requests don't hang indefinitely
 const axiosInstance = axios.create({
