@@ -1,0 +1,10 @@
+# Node modules
+/backend/node_modules
+/fitness-frontend/node_modules
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
