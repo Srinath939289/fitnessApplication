@@ -1,29 +1,22 @@
-import axios from 'axios';
+import axios from "axios";
 
-// Set your backend URL (allow override with REACT_APP_API_URL)
-const API_BASE_URL ='https://fitnessapplication-n1uh.onrender.com';
-
-// Create axios instance with a timeout so requests don't hang indefinitely
 const axiosInstance = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: "https://fitnessapplication-n1uh.onrender.com",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
-  timeout: 10000, // 10 seconds
 });
 
-// Request interceptor to attach JWT token
+// Auto attach token
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
 export default axiosInstance;
