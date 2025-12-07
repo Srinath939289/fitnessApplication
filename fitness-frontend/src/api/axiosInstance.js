@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://fitnessapplication-n1uh.onrender.com",
+  baseURL: "https://fitnessapplication-backend.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
