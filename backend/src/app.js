@@ -12,7 +12,7 @@ const chatRoutes = require("./routes/chat");
 
 // CORS CONFIG (IMPORTANT)
 app.use(cors({
-  origin: "https://YOUR-FRONTEND-RENDER-URL", 
+  origin: "https://fitnessapplication-jyap.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
